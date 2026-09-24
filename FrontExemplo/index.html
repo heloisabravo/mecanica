@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      table,
+      tr,
+      td,
+      th {
+        border-collapse: collapse;
+        border: 2px solid green;
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="placa" placeholder="Placa" required />
+      <input type="text" id="marca" placeholder="Marca" required />
+      <input type="text" id="modelo" placeholder="Modelo" required />
+      <input type="text" id="ano" placeholder="Ano" required />
+      <input type="text" id="cor" placeholder="Cor" required />
+      <button>Cadastrar Veiculo </button>
+    </form>
+    <table>
+      <tbody></tbody>
+    </table>
+    <script src="./script.js"></script>
+  </body>
+</html>

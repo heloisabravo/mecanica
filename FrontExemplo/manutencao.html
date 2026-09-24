@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    
+    </style>
+</head>
+<body>
+    <form>
+      <input type="date" id="data_entrada" placeholder="Data de Entrada"/>
+      <input type="text" id="descricao_problema"  placeholder="Descrição do Problema" />
+      <input type="text" id="tipo_servico"  placeholder="Tipo de Serviço"/>
+      <input type="text" id="situacao"  placeholder="Situação"/>
+      <input type="number" id="valor" placeholder="Valor"/>
+      <button>Cadastrar Manutenção</button>
+    </form>
+    <table>
+         <tbody></tbody>
+    </table>
+       <script src="./manutencoes.js"></script>
+</body>
+</html>

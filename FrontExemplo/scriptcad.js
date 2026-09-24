@@ -1,0 +1,26 @@
+const api = "http://192.168.1.3:3000";
+document.querySelector("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const senha = document.querySelector("#senha").value;
+  const nova = document.querySelector("#Csenha").value;
+  if (nova != senha || senha == "" || nova == "") {
+    alert("as senhas precisam ser iguais");
+  } else {
+    const datas = {
+      user: document.querySelector("#nome").value,
+      password: document.querySelector("#senha").value,
+      cpf: document.querySelector("#cpf").value,
+      telefone: document.querySelector("#telefone").value,
+      endereco: document.querySelector("#endereco").value,
+    };
+    const resposta = await fetch(`${api}/cadastro`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(datas),
+    });
+    if (resposta.status != 201) {
+     return alert("usuário ou senha incorretos");
+    }
+    window.location.href = "./login.html";
+  }
+});
